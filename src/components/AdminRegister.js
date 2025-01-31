@@ -98,7 +98,7 @@ const AdminRegister = () => {
     setError('');
     
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/register', {
+      const response = await axios.post('https://new-auth-with-admin.vercel.app/api/admin/register', {
         name: formData.name.trim(),
         email: formData.email.toLowerCase().trim(),
         password: formData.password,
