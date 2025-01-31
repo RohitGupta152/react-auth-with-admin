@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
       if (token) {
         try {
-          const response = await axios.get('http://localhost:5000/api/admin/profile', {
+          const response = await axios.get('https://new-auth-with-admin.vercel.app/api/admin/profile', {
             headers: { Authorization: `Bearer ${token}` }
           });
           
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
   // Login Verification method
   const verifyLogin = useCallback(async (token) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/verify-login/${token}`, {
+      const response = await fetch(`https://new-auth-with-admin.vercel.app/api/auth/verify-login/${token}`, {
         method: 'GET',
       });
   
