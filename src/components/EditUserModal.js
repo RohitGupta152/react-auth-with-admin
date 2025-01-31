@@ -38,7 +38,7 @@ const EditUserModal = ({ user, isOpen, onClose, onUpdateUser }) => {
     try {
       const token = localStorage.getItem('adminToken');
       const response = await axios.patch(
-        `http://localhost:5000/api/admin/user/${user._id}`, 
+        `https://new-auth-with-admin.vercel.app/api/admin/user/${user._id}`, 
         formData,
         {
           headers: { 
