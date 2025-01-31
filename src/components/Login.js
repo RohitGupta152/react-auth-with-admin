@@ -94,7 +94,7 @@ const Login = () => {
     setError('');
     
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/login`, {
+      const response = await fetch(`https://new-auth-with-admin.vercel.app/api/auth/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -130,7 +130,7 @@ const Login = () => {
   // Social login handler
   const handleSocialLogin = async (provider) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/${provider}`, {
+      const response = await fetch(`https://new-auth-with-admin.vercel.app/api/auth/${provider}`, {
         method: 'GET',
         credentials: 'include'
       });
