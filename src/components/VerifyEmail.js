@@ -19,7 +19,7 @@ const VerifyEmail = () => {
           return;
         }
 
-        const response = await fetch(`http://localhost:5000/api/auth/verify/${token}`, {
+        const response = await fetch(`https://new-auth-with-admin.vercel.app/api/auth/verify/${token}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
