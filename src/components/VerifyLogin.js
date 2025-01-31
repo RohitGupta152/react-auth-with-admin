@@ -25,7 +25,7 @@ const VerifyLogin = () => {
 
         // Send verification request to backend
         const response = await axios.get(
-          `http://localhost:5000/api/auth/verify-login/${token}`,
+          `https://new-auth-with-admin.vercel.app/api/auth/verify-login/${token}`,
           {
             headers: {
               'Content-Type': 'application/json'
