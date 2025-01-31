@@ -87,7 +87,7 @@ const AdminLogin = () => {
     setError('');
     
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', {
+      const response = await axios.post('https://new-auth-with-admin.vercel.app/api/admin/login', {
         email: formData.email.toLowerCase().trim(),
         password: formData.password,
         rememberMe: rememberMe
@@ -117,7 +117,7 @@ const AdminLogin = () => {
   // Social login handler
   const handleSocialLogin = async (provider) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/admin/auth/${provider}`);
+      const response = await axios.get(`https://new-auth-with-admin.vercel.app/api/admin/auth/${provider}`);
 
       if (response.data.success) {
         login(response.data.user, response.data.token);
