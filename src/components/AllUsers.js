@@ -56,7 +56,7 @@ const AllUsers = () => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('adminToken');
-        const response = await axios.get('http://localhost:5000/api/admin/users', {
+        const response = await axios.get('https://new-auth-with-admin.vercel.app/api/admin/users', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -100,7 +100,7 @@ const AllUsers = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.delete(`http://localhost:5000/api/admin/user/${userToDelete._id}`, {
+      await axios.delete(`https://new-auth-with-admin.vercel.app/api/admin/user/${userToDelete._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
