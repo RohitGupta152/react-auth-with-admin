@@ -133,7 +133,7 @@ const Register = () => {
     setError('');
     
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/register`, {
+      const response = await fetch(`https://new-auth-with-admin.vercel.app/api/auth/register`, {
         method: 'POST',
         credentials: 'include',
         headers: {
