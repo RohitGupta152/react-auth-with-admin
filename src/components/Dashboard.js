@@ -26,7 +26,7 @@ const Dashboard = () => {
         }
 
         // Fetch user profile
-        const response = await axios.get('http://localhost:5000/api/auth/profile', {
+        const response = await axios.get('https://new-auth-with-admin.vercel.app/api/auth/profile', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
